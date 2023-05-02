@@ -23,6 +23,7 @@ function grabCurrentWeather() {
         console.log(data);
         displayCurrentWeather(data);
         grabFiveDayForecast(data);
+        saveSearchedCity();
       }); 
       
      };
@@ -98,6 +99,28 @@ function grabCurrentWeather() {
           
         }
       };
+
+      function saveSearchedCity() {
+        var storedCities = JSON.parse(localStorage.getItem('searchedCities'));
+        if (storedCities !== null) {
+          searchedCities = storedCities;
+          displaySearchedCities();
+        }
+      };
+  
+      function displaySearchedCities() {
+        pastCity.innerHTML = '';
+        for (var i = 0; i < searchedCities.length; i++) {
+          var cityBtn = document.createElement('button');
+          cityBtn.classList = 'list-group-item list-group-item-action';
+          cityBtn.textContent = searchedCities[i];
+          cityBtn.addEventListener('click', function() {
+            cityInput.value = this.textContent;
+            grabCurrentWeather();
+          });
+          pastCity.appendChild(cityBtn);
+        }
+      }
 
          submitBtn.addEventListener('click', function () {
            grabCurrentWeather();
