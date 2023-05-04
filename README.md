@@ -14,4 +14,4 @@ OpeanWeatherAPI for the weather Data and Icons
 
 ![Weather Forecast](assets/Screenshot%20(122).png)
 
-[Weather Dashbord Application](https://dksolomon.github.io/Weather-Dashboard/)
+[Weather Dashbord Application](https://dksolomon.github.io/Weather-Forcast/)
