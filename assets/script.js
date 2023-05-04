@@ -41,8 +41,8 @@ function grabCurrentWeather() {
      
         currentCityInfo.innerHTML = '<h2>' + cityName + ' '  + date  + "<img src ='"+iconLink+"'/>";
         
-        currentConditions.innerHTML = '</h2>' + '<p>Weather:'+ weatherCondition  + '</p>' +
-        '<p>Temperature:' + temperature + '°F</p>' + '<p>Windspeed: ' + windspeed + 'mph</p>' + '<p>Humidity: ' + humidity + '%</p>';
+        currentConditions.innerHTML = '</h2>' + '<p>Weather: '+ weatherCondition  + '</p>' +
+        '<p>Temperature: ' + temperature + '°F</p>' + '<p>Windspeed: ' + windspeed + 'mph</p>' + '<p>Humidity: ' + humidity + '%</p>';
      
         
          }; 
@@ -88,7 +88,7 @@ function grabCurrentWeather() {
           var iconLink ='http://openweathermap.org/img/wn/' + icon + '@2x.png';
   
           var dayEl = document.createElement('div');
-          dayEl.classList = ('card-body');
+          dayEl.classList = ('border border-light card-body');
           
           dayEl.innerHTML =  '<h3>' + date + '</h3>' + '<p>Temperature: ' + temperature +
            '°F</p>' + '<p>Weather: ' + weatherDescription + "<img src ='"+iconLink+"'/>" +
@@ -112,7 +112,7 @@ function grabCurrentWeather() {
         pastCity.innerHTML = '';
         for (var i = 0; i < searchedCities.length; i++) {
           var cityBtn = document.createElement('button');
-          cityBtn.classList = 'list-group-item list-group-item-action';
+          cityBtn.classList = 'rounded my-2list-group-item list-group-item-action';
           cityBtn.textContent = searchedCities[i];
           cityBtn.addEventListener('click', function() {
             cityInput.value = this.textContent;

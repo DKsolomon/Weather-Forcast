@@ -1,4 +1,47 @@
 .current-forecast {
     border-style: dotted;
+    display: flex;
+    margin:0%;
     
+
 }
+
+body {
+    background-color: #4F6367;
+    color: beige;
+}
+
+header {
+    background-color: #B8D8D8;
+}
+
+header  h1{
+    text-align: center;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    text-align: center;
+}
+
+.searchtext{
+    margin-left: 10px;
+}
+
+.past-cities {
+    margin-right: 15px;
+}
+
+.card-body {
+    
+    padding: 5px 5px;
+    margin: 10px;
+    border: beige;
+    width: 150px;
+        
+}
+    

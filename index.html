@@ -14,25 +14,25 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-
+    <main class="row">
    <section id="city-search-section" class="col-sm-3 col-lg-2">
-         <h2>Search for a city:</h2>
+         <h2 class="searchtext">Search for a city:</h2>
             <input id="city-input" class="m-2" type="text" placeholder="Enter a City">
-            <button type="submit" id="submitbtn" value="submit" class="m-2">Search!</button>
-            <div id="past-cities"></div>
+            <button type="submit" id="submitbtn" value="submit" class="btn btn-primary m-2">Search!</button>
+            <ul id="past-cities" class="past-cities"></ul>
     </section>
     
     <div class="col-sm-9 com-lg-10">
-        <section class="row current-forecast" id="current-forecast">
+        <section class="row border border--light current-forecast" id="current-forecast">
                 <h2 id="city-info"></h2>
                 <ul id="current-conditions"></ul>
         </section>
             
-            <section class="row" id="5-day-forecast">
+            <section class="row five-day-forecast" id="5-day-forecast">
                 <h2>5 Day Forecast:</h2>
                 </section>
             </div>
-
+</main>
 </body>
 
 <script src="assets/script.js"></script>
